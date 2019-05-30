@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+    <population Name="StartingGear_OmniSlime">
+        <group Style="pickeach">
+            <object Blueprint="FullWaterskin" Number="1"></object>
+        </group>
+    </population>
+    <population Name="StartingGear_TestSlime">
+        <group Style="pickeach">
+            <object Blueprint="FullWaterskin" Number="1"></object>
+			<object Blueprint="CiderWaterskin" Number="1"></object>
+			<object Blueprint="WineWaterskin" Number="1"></object>
+			<object Blueprint="Slimeskin" Number="1"></object>
+			<object Blueprint="LavaWaterskin_Ingredient" Number="1"></object>
+			<object Blueprint="AcidWaterskin_Ingredient" Number="1"></object>
+			<object Blueprint="AsphaltWaterskin_Ingredient" Number="1"></object>
+			<object Blueprint="CloningDraughtWaterskin_Ingredient" Number="80"></object>
+			<object Blueprint="ConvalessenceWaterskin" Number="1"></object>
+			<object Blueprint="GooWaterskin" Number="1"></object>
+			<object Blueprint="SaltWaterskin_Ingredient" Number="1"></object>
+			<object Blueprint="OozeWaterskin" Number="1"></object>
+			<object Blueprint="SludgeWaterskin" Number="1"></object>
+			<object Blueprint="Oilskin" Number="1"></object>
+			<object Blueprint="BloodCanteen" Number="1"></object>
+			<object Blueprint="Steel Short Sword" Number="1"></object>
+			<object Blueprint="Metal Strut" Number="1"></object>
+        </group>
+    </population>
+</populations>

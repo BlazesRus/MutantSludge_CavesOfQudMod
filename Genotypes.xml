@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<genotypes>
+  <genotype Name="MutantSludge" StatPoints="44" RandomWeight="10" DisplayName="MutantSludge" RestrictedGender="neuter" Subtypes="OmniSlime" Class="" Code="c" Tile="Creatures/sw_sludge.bmp" BodyObject="Omnicell" BaseHPGain="2-3" BaseSPGain="70" BaseMPGain="1">
+    <stat Name="Strength" Minimum="20" Maximum="26"></stat><!-- Balanced based on Ooze starting value-->
+    <stat Name="Agility" Minimum="5" Maximum="13"></stat><!-- Min based on Ooze starting value; Max based on BaseSludge object maximum roll with level 18-->
+    <stat Name="Toughness" Minimum="12" Maximum="15"></stat><!-- Based on Ooze starting value-->
+    <stat Name="Intelligence" Minimum="1" Maximum="20"></stat><!-- Minimum Values based on Sludge/Ooze object values for Int,Wil,Ego-->
+    <stat Name="Willpower" Minimum="0" Maximum="20"></stat>
+    <stat Name="Ego" Minimum="0" Maximum="24"></stat>
+    <reputations>
+      <reputation With="Oozes" Value="600" />
+    </reputations>
+    <chargeninfo>   &amp;c&#249;&amp;y Consume to grow stronger
+   &amp;c&#249;&amp;y +850 reputation with &amp;COozes
+   &amp;c&#249;&amp;y Can gain up to 2 mutation points per level from engulfment plus one per level
+   &amp;c&#249;&amp;y  except for Cyberslime(which gets some Cybernetics points instead)
+    </chargeninfo>
+  </genotype>
+</genotypes>

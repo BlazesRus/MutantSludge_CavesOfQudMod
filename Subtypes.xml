@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<subtypes>
+  <class ID="OmniSlime" ChargenTitle="Newly sentient" SingularTitle="slime">
+        <subtype Name="Stable MutantSludge" Code="c" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="Omnicell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="Mental" DisplayName="MutantSludge">
+            <extrainfo>Stable slime, has an ability that let's them evolve when standing in liquid.</extrainfo>
+            <skills>
+                <skill Name="Cudgel" />
+            </skills>
+        </subtype>
+        <subtype Name="AstralSludge" Code="d" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AstralSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="Mental"  DisplayName="AstralSludge">
+            <extrainfo>&amp;c&#249;&amp;y Stable slime that copies mostly mental mutations on engulfment
+            </extrainfo>
+            <skills>
+                <skill Name="Cudgel" />
+            </skills>
+        </subtype>
+        <subtype Name="CyberSludge" Code="e" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="CyberSlimeCell" DetailColor="C" CyberneticsLicensePoints="2"  AllowedMutationCategories="" DisplayName="CyberSlime" BaseMPGain="0">
+            <extrainfo>&amp;c&#249;&amp;y Stable slime with some machine based features/parts(May rebuke robots), that has ability to install implants(not implemented yet).
+&amp;c&#249;&amp;y Absorbs stats but no mutations on engulfment.
+&amp;c&#249;&amp;y 1 CyberneticsLicense points per level from engulfment (2 Starting CyberneticsLicensePoints)
+            </extrainfo>
+        </subtype>
+        <subtype Name="ChimeraSludge" Code="f" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C"  AllowedMutationCategories="*" DisplayName="ChimeraSludge">
+            <chargeninfo>
+&amp;c&#249;&amp;y Stable carnivorous slime with features from other creatures
+            </chargeninfo>
+        </subtype>
+        <subtype Name="HybridChimeraSludge" Code="g" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="HybridChimeraSlimeCell" DetailColor="C"  AllowedMutationCategories="*" DisplayName="ChimeraSludgeV2">
+            <chargeninfo>
+&amp;c&#249;&amp;y Stable carnivorous slime with features from other creatures
+            </chargeninfo>
+        </subtype>
+<!--         <subtype Name="AdaptiveSlime" Code="i" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AdaptiveSlimeCell" DetailColor="C" AllowedMutationCategories="" DisplayName="AdaptiveSlime">
+            <extrainfo>
+                &amp;c&#249;&amp;y Slime that can adjust its blood type and other features(doesn't feature Soup Sludge like evolution ability)
+            </extrainfo>
+        </subtype> -->
+		<subtype Name="MimicSlime" Code="h" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="MimicSlimeCell" DetailColor="C" MutationPoints="0" AllowedMutationCategories="" DisplayName="MimicSlime">
+            <extrainfo>
+                &amp;c&#249;&amp;y Stable slime with mimicry abilities
+            </extrainfo>
+        </subtype>
+        <!--<subtype Name="ExperimentalSlime" Code="j" Gear="StartingGear_TestSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="" DisplayName="ExperimentalSlime">
+            <extrainfo>
+                &amp;c&#249;&amp;y Version of the slime for testing things etc
+            </extrainfo>
+        </subtype>-->
+    </class>
+</subtypes>

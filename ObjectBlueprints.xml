@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <!--<object Name="OmniSlimeWeapon01" Inherits="Item">
+    <part Name="NoBreak" />
+    <part Name="Render" DisplayName="[Natural Weapon]" Visible="true" />
+    <part Name="MeleeWeapon" PenBonus="0" MaxStrengthBonus="1000" BaseDamage="1" Skill="Cudgel" Stat="Strength" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
+    <part Name="Cursed" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NaturalGear" />
+    <tag Name="NeverStack" />
+    <tag Name="ShowMeleeWeaponStats" Value="true" />
+    <tag Name="WeaponUnarmed" />
+  </object>-->
+  <object Name="OmniSlimeBaseWeapon" Inherits="Item">
+    <part Name="NoBreak" />
+    <part Name="Render" DisplayName="[Natural Weapon]" Visible="true" />
+    <!--<part Name="MeleeWeapon" PenBonus="0" MaxStrengthBonus="1000" BaseDamage="1" Skill="Cudgel" Stat="Strength" />-->
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NaturalGear" />
+    <tag Name="NeverStack" />
+    <tag Name="ShowMeleeWeaponStats" Value="true" />
+    <tag Name="WeaponUnarmed" />
+  </object>
+  <object Name="OmniSlimePodSlot" Inherits="OmniSlimeBaseWeapon">
+<!--     <part Name="RestrictedPodSlot" /> -->
+    <part Name="Cursed" />
+    <part Name="MeleeWeapon" RenderString="\" PenBonus="0" HitBonus="6" MaxStrengthBonus="99" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" />
+  </object>
+   <object Name="OmniSlimeTenticle" Inherits="OmniSlimeBaseWeapon">
+    <part Name="Cursed" />
+    <part Name="MeleeWeapon" RenderString="\" PenBonus="1" HitBonus="6" MaxStrengthBonus="99" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" />
+  </object>
+  <object Name="BaseOmniPseudopod" Inherits="OmniSlimeBaseWeapon">
+<!--     <part Name="CursedPodWP" /> -->
+    <part Name="Cursed" />
+    <tag Name="WaterContainer" Value="1" />
+    <part Name="LiquidVolume" MaxVolume="64" Volume="0" Radioactivity="0" Saltyness="0" />
+    <part Name="MeleeWeapon" RenderString="\" PenBonus="0" HitBonus="6" MaxStrengthBonus="99" BaseDamage="1d3" Skill="Cudgel" Stat="Strength" />
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+  <object Name="BaseOmniSlime01">
+    <part Name="WalkStopper" />
+    <part Name="Render" DisplayName="[Sludge]" RenderString="J" RenderLayer="10" RenderIfDark="false" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp" />
+    <tag Name="OverlayColor" Value="&amp;G^k" />
+    <part Name="Physics" Takeable="false" Conductivity="50" Solid="false" Weight="200" Category="Creature" />
+    <part Name="Brain" Hostile="false" Wanders="true" Factions="Oozes" />
+    <part Name="Body" Builder="BodyOmniSludge" />
+    <part Name="Combat" />
+    <part Name="Experience" />
+    <part Name="Inventory" />
+    <part Name="Mutations" />
+    <part Name="Skills" />
+    <part Name="ActivatedAbilities" />
+    <part Name="RandomLoot" />
+    <stat Name="Strength" ShortName="ST" Min="1" Max="9000" Value="16" sValue="20,1d6,(t-1)d4" />
+    <stat Name="Agility" ShortName="AG" Min="1" Max="9000" Value="16" sValue="5" />
+    <stat Name="Toughness" ShortName="TO" Min="1" Max="9000" Value="16"  sValue="12" />
+    <stat Name="Intelligence" ShortName="IN" Min="1" Max="9000" Value="16" sValue="1" />
+    <stat Name="Willpower" ShortName="WI" Min="1" Max="9000" Value="16" sValue="0"/>
+    <stat Name="Ego" ShortName="EG" Min="1" Max="9000" Value="16"  sValue="0" />
+    <stat Name="Hitpoints" ShortName="HP" Min="0" Max="64000" Value="32" />
+    <stat Name="Energy" ShortName="EN" Min="-100000" Max="100000" Value="0" />
+    <stat Name="Speed" ShortName="SP" Min="1" Max="10000" Value="40" />
+    <stat Name="MoveSpeed" ShortName="MS" Min="-200" Max="200" Value="100" />
+    <stat Name="AV" ShortName="AV" Min="0" Max="100" Value="3" />
+    <stat Name="DV" ShortName="DV" Min="-100" Max="100" Value="0" />
+    <stat Name="XP" ShortName="XP" Min="0" Max="2147483647" Value="0" />
+    <stat Name="XPValue" ShortName="XPValue" sValue="*XP" Min="0" Max="2147483647" />
+    <stat Name="SP" ShortName="SP" Min="0" Max="2147483647" Value="0" />
+    <stat Name="MP" ShortName="MP" Min="0" Max="2147483647" Value="0" />
+    <stat Name="AP" ShortName="AP" Min="0" Max="2147483647" Value="0" />
+    <stat Name="MA" ShortName="MA" Min="-100" Max="2147483647" Value="0" />
+    <stat Name="HeatResistance" ShortName="HeatResistance" Min="-100" Max="100" Value="0" />
+    <stat Name="ColdResistance" ShortName="ColdResistance" Min="-100" Max="100" Value="0" />
+    <stat Name="ElectricResistance" ShortName="ElectricResistance" Min="-100" Max="100" Value="0" />
+    <stat Name="AcidResistance" ShortName="AcidResistance" Min="-100" Max="100" Value="10" />
+    <part Name="Leveler" />
+    <part Name="Commerce" Value="100" />
+    <part Name="Stomach" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallSlimePuddle" BurntCorpseChance="100" BurntCorpseBlueprint="Ashes" BodyDrop="true" InventoryDrop="true"/>
+    <stat Name="Level" ShortName="LV" Min="1" Max="10000" Value="1" />
+    <property Name="Role" Value="Tank" />
+    <tag Name="NeverStack" />
+    <tag Name="Creature" />
+    <tag Name="PetResponse" Value="spurts" />
+    <tag Name="SimpleConversation" Value="&amp;w*exudes loudly*&amp;y~&amp;w*soft gushing*&amp;y" />
+    <tag Name="HeroNameTitleTemplate" Value="*Name*, legendary *CreatureType*" />
+    <tag Name="HeroNameTitlePariah" Value="Pariah" />
+    <tag Name="HeroNamePrefixes" Value="cubi,spheri,ovoi,discoi,poly,fusi,cubo,octa,tri,hepta,deca,dode,hexa,n-goni,k-goni,m-goni,rhomu,recta,quadri,paralle,trape,iso,cycli,okta,annu,elli,di,cycloi,astroi,ova,squi" />
+    <tag Name="HeroNamePrefixAmount" Value="1" />
+    <tag Name="HeroNameInfixes" Value="mem,so,xa,xi,dron,nu,phro,polli,pollo,rchmi,rista,risto,tha,chrys,kri,kle,sta,ri,sta,tychi,tycho,kto,rbe,pto,phri" />
+    <tag Name="HeroNameInfixAmount" Value="0-1" />
+    <tag Name="HeroNamePostfixes" Value="lleus,eon,nis,stos,stus,dios,sop,ther,non,tos,thon,los,dros,io,ios,is,ius,aios,phis,ses,phas,mus,bion,ron,thenes,strate,lion,trios,thenis,medes,hud,mon,krates,lytos,ntinos,rgos,teles,theus,lemy,phokles,thaddeus,crates,aster,xis,rgo" />
+    <tag Name="HeroNamePostfixAmount" Value="1" />
+    <property Name="HeroNameTitleWiseDescriptor" Value="Wise,Great,Sage,Judicious,Giant,Sophic,Erudite,Cubic,Regular,Spherical,Platonic,Symmetric,Triangular" />
+    <property Name="HeroNameTitleMayorSyn" Value="philosopher,mayor,elder,theorist,sophist" />
+    <property Name="HeroNameTitleMayorSynCap" Value="Philosopher,Mayor,Elder,Theorist,Sophist" />
+    <xtagTextFragments YounglingNoise="*squish*,*spurt*" Activity="resorbing matter,undulating,liquifying and congealing" VillageActivity="jiggling rhythmically,undulating,liquifying and congealing" NeedsItemFor="for my own collection,to slake my greed,because of its trade value,for resorbing purposes,so I can engulf it,to absorb it" SacredThing="platonic solids,ooze,gelatin,fluid dynamics,the membrane" ArableLand="pools of liquid,free matter,gelatin" ValuedOre="matter,life" />
+    <stag Name="HardMaterial" Value="membrane" />
+    <mutation Name="DarkVision" Level="8" />
+    <part Name="MentalShield" />
+    <tag Name="Gender" Value="neuter" />
+    <property Name="LairTable" Value="Ooze Lair 1" />
+    <intproperty Name="Slimewalking" Value="1" />
+    <part Name="NoKnockdown" />
+    <tag Name="Ooze" Value="true" />
+    <part Name="Render" Tile="Creatures/sw_amoeba.bmp" />
+    <part Name="ConversationScript" ConversationID="Oozes" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="BleedLiquid" Value="slime-1000" />
+    <tag Name="BleedColor" Value="&amp;g" />
+    <tag Name="BleedPrefix" Value="&amp;gslimy" />
+    <part Name="Description" Short="Quickened to life, or something akin to life, by the ionic exchange between an ultra-reactive primordial soup and its liquid cousin, the sludge repeats a process played out on trillions of star-orbiting world-rocks."></part>
+    <!--<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />-->
+  </object>
+  <object Name="AdaptiveSlimeObj" Inherits="BaseOmniSlime01">
+    <skill Name="ShortBlades" />
+    <part Name="Body" Builder="BodyOmniSludge" />
+	<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <object Name="AcidicOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Gacidic pseudopod"></part>
+    <part Name="MeleeWeapon" RenderString="\" HitBonus="6" MaxStrengthBonus="99" BaseDamage="1d4" ElementalDamage="15-25" Element="Acid" Skill="Cudgel" Stat="Strength"></part>
+  </object>
+  <object Name="MagmaticOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Rmagmatic pseudopod"></part>
+    <part Name="TemperatureOnHit" Amount="350-400" Max="false" OnWielderHit="true"></part>
+    <part Name="MeleeWeapon" RenderString="\" HitBonus="6" MaxStrengthBonus="99" BaseDamage="2d4" ElementalDamage="15-25" Element="Fire" Skill="Cudgel" Stat="Strength"></part>
+  </object>
+  <object Name="HoneyedOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;whoneyed pseudopod"></part>
+    <part Name="StickOnHit" Chance="100"></part>
+  </object>
+  <object Name="SugaryOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Ysugary pseudopod"></part>
+    <part Name="StickOnHit" Chance="100"></part>
+  </object>
+  <object Name="WaxenOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Ywaxen pseudopod"></part>
+    <part Name="TemperatureOnHit" Amount="50-60" Max="false" OnWielderHit="true"></part>
+    <part Name="StickOnHit" Chance="100"></part>
+  </object>
+  <object Name="TarryOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Ktarry pseudopod"></part>
+    <part Name="StickOnHit" Chance="100"></part>
+  </object>
+  <object Name="WateryOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Bwatery pseudopod"></part>
+    <part Name="QuenchOnHit" Chance="100"></part>
+  </object>
+  <object Name="SaltyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Ysalty pseudopod"></part>
+    <part Name="ThirstOnHit" Amount="60000" Chance="100"></part>
+    <part Name="LiquidVolume" MaxVolume="96" Volume="0" Radioactivity="0" Saltyness="100" />
+  </object>
+  <object Name="SlimyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;gslimy pseudopod"></part>
+  </object>
+  <object Name="UnctuousOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Yunctuous pseudopod"></part>
+  </object>
+  <object Name="InkyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Kinky pseudopod"></part>
+  </object>
+  <object Name="OilyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Koily pseudopod"></part>
+  </object>
+  <object Name="BloodyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;rbloody pseudopod"></part>
+  </object>
+  <object Name="LushOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;mlush pseudopod"></part>
+    <part Name="DrunkOnHit" Chance="100"></part>
+  </object>
+  <object Name="SpicedOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;rspiced pseudopod"></part>
+    <part Name="DrunkOnHit" Chance="100"></part>
+  </object>
+  <object Name="SludgyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;wsludgy pseudopod"></part>
+    <part Name="QudzuMelee" Chance="100"></part>
+  </object>
+  <object Name="GooeyOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Ggooey pseudopod"></part>
+    <part Name="PoisonOnHit" Chance="100"></part>
+  </object>
+  <object Name="PutridOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Kputrid pseudopod"></part>
+    <part Name="VomitOnHit" Chance="100"></part>
+  </object>
+  <object Name="OozingOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Koozing pseudopod"></part>
+    <part Name="DiseaseOnHit" Chance="100"></part>
+  </object>
+  <object Name="LuminousOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="MeleeWeapon" RenderString="\" HitBonus="6" MaxStrengthBonus="99" BaseDamage="0" Skill="Cudgel" Stat="Strength"></part>
+    <part Name="Render" DisplayName="&amp;Cluminous pseudopod"></part>
+    <part Name="HealOnHit" Chance="100"></part>
+    <part Name="TemperatureOnHit" Amount="-20-30" Max="false" OnWielderHit="true"></part>
+  </object>
+  <object Name="NeutronicOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Bn&amp;be&amp;Ku&amp;yt&amp;Yr&amp;Bo&amp;bn&amp;Ki&amp;yc&amp;y pseudopod"></part>
+    <part Name="BoomOnHit" Chance="100"></part>
+    <part Name="LiquidVolume" MaxVolume="96" Volume="0" Radioactivity="100" Saltyness="0" />
+  </object>
+  <object Name="HomogenizedOmniPseudopod" Inherits="BaseOmniPseudopod">
+    <part Name="Render" DisplayName="&amp;Yhomogenized pseudopod"></part>
+  </object>
+  
+  <object Name="Omnicell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="OmniConsume" />
+    <part Name="EvolutionO" />
+  </object>
+  
+  <object Name="AstralSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="AstralConsume" />
+    <part Name="EvolutionO" />
+    <mutation Name="Astral"></mutation>
+    <tag Name="Astral"></tag>
+    <inventoryobject Blueprint="Astral_Tabby_Bite" Number="1"></inventoryobject>
+    <mutation Name="Infiltrate" Level="1"></mutation>
+  </object>
+  
+  <object Name="CyberSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;C" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <part Name="Description" Short="A living sludge infected with Nanobots"></part>
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Lacerate" />
+    <inventoryobject Blueprint="Graftek_Tendril" Number="2" />
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="CyberConsume" />
+    <part Name="EvolutionO" />
+  </object>
+  
+  <object Name="HybridChimeraSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <stat Name="Hitpoints" Value="30" />
+    <part Name="Description" Short="A living sludge further mutated to have features from some other creatures"></part>
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <mutation Name="Carnivorous" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="ChimeraConsume" />
+    <part Name="EvolutionO" />
+    <property Name="Burrowing" Value="true" />
+    <mutation Name="HeightenedHearing" />
+    <mutation Name="BurrowingClaws" Level="10" CreateObject="false" />
+    <mutation Name="GasGeneration" Level="1" GasObject="SleepGas" />
+    <mutation Name="LiquidFont" Liquid="gel"></mutation>
+    <mutation Name="WallWalker"></mutation>
+  </object>
+  
+  <object Name="ChimeraSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <stat Name="Hitpoints" Value="30" />
+    <part Name="Description" Short="A living sludge further mutated to have features from some other creatures"></part>
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <mutation Name="Carnivorous" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="ChimeraConsume" />
+    <part Name="EvolutionO" />
+    <property Name="Burrowing" Value="true" />
+    <mutation Name="HeightenedHearing" />
+    <mutation Name="BurrowingClaws" Level="10" CreateObject="false" />
+    <mutation Name="GasGeneration" Level="1" GasObject="SleepGas" />
+    <mutation Name="LiquidFont" Liquid="gel"></mutation>
+    <mutation Name="WallWalker"></mutation>
+  </object>
+  
+   <object Name="AdaptiveSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <part Name="Description" Short="A living slime that evolves to adapt features from other creatures and objects."></part>
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="CyberConsume" />
+    <part Name="EvolutionO" />
+  </object>
+  <object Name="MimicSlimeCell" Inherits="BaseOmniSlime01">
+    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" RenderString="J" ColorString="&amp;c" DetailColor="C" Tile="Creatures/sw_sludge.bmp"></part>
+    <part Name="Description" Short="A living sludge infected with properties of a mimic."></part>
+    <mutation Name="Regeneration" Level="5" />
+    <mutation Name="EvolMutV2" Level="1" />
+    <part Name="Engulfing" />
+    <part Name="CyberConsume" />
+    <part Name="EvolutionO" />
+    <part Name="Mimic" CopyColor="true" CopyString="true"></part>
+    <part Name="MimicProperties"></part>
+    <inventoryobject Blueprint="Mimic_Bite" Number="1"></inventoryobject>
+  </object>
+</objects>

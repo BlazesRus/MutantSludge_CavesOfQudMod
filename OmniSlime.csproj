@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46EC2AFD-FC4D-452C-9BDB-5BA048B4C2F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OmniSlime</RootNamespace>
+    <AssemblyName>OmniSlime</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IntermediateOutputPath>F:\CavesOfQudStuff\ProjectFiles\OmniSlime\obj\</IntermediateOutputPath>
+    <UseCommonOutputDirectory>True</UseCommonOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>F:\CavesOfQudStuff\ProjectFiles\OmniSlime\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>F:\CavesOfQudStuff\ProjectFiles\OmniSlime\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Genotypes.xml" />
+    <Resource Include="ObjectBlueprints.xml" />
+    <Resource Include="PopulationTables.xml" />
+    <Resource Include="Subtypes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\1511228072\MMM_Levitation.cs">
+      <Link>MMM_Levitation.cs</Link>
+    </Compile>
+    <Compile Include="..\1511228072\MMM_Telekinesis.cs">
+      <Link>MMM_Telekinesis.cs</Link>
+    </Compile>
+    <Compile Include="AstralConsume.cs" />
+    <Compile Include="BodyOmniSludge.cs" />
+    <Compile Include="ChimeraConsume.cs" />
+    <Compile Include="CursedPodWP.cs" />
+    <Compile Include="CyberConsume.cs" />
+    <Compile Include="EvolutionO.cs" />
+    <Compile Include="F:\CavesOfQudStuff\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="F:\CavesOfQudStuff\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="F:\CavesOfQudStuff\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OmniConsume.cs" />
+    <Compile Include="RestrictedPodSlot.cs" />
+    <EmbeddedResource Include="F:\CavesOfQudStuff\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\GlobalConfig.json">
+      <Link>BaseFolderObjects\GlobalConfig.json</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Joppa.rpm">
+      <Link>BaseFolderObjects\Joppa.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaPreShrine.rpm">
+      <Link>BaseFolderObjects\JoppaPreShrine.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaRuins.rpm">
+      <Link>BaseFolderObjects\JoppaRuins.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaWorld.rpm">
+      <Link>BaseFolderObjects\JoppaWorld.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaWorldNew2.rpm">
+      <Link>BaseFolderObjects\JoppaWorldNew2.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaWorldNew3.rpm">
+      <Link>BaseFolderObjects\JoppaWorldNew3.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaWorldNew4.rpm">
+      <Link>BaseFolderObjects\JoppaWorldNew4.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\JoppaWorldNew_Test.rpm">
+      <Link>BaseFolderObjects\JoppaWorldNew_Test.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Joppa_Wofs.rpm">
+      <Link>BaseFolderObjects\Joppa_Wofs.rpm</Link>
+    </None>
+    <None Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\SerenityWorld.rpm">
+      <Link>BaseFolderObjects\SerenityWorld.rpm</Link>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <ProjectReference Include="F:\CavesOfQudStuff\Decompiled\Assembly-CSharp.csproj">
+      <Project>{f85af21d-80a7-49c7-a771-8b413f749116}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Classes.xml">
+      <Link>BaseFolderObjects\Classes.xml</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\ObjectBlueprints.xml">
+      <Link>BaseFolderObjects\ObjectBlueprints.xml</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Display.txt">
+      <Link>BaseFolderObjects\Display.txt</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\AnimalStock.xml">
+      <Link>BaseFolderObjects\AnimalStock.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\BodyTypes.xml">
+      <Link>BaseFolderObjects\BodyTypes.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Conversations.xml">
+      <Link>BaseFolderObjects\Conversations.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\EncounterTables.xml">
+      <Link>BaseFolderObjects\EncounterTables.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Factions.xml">
+      <Link>BaseFolderObjects\Factions.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Genders.xml">
+      <Link>BaseFolderObjects\Genders.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Genotypes.xml">
+      <Link>BaseFolderObjects\Genotypes.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Manual.xml">
+      <Link>BaseFolderObjects\Manual.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Mods.xml">
+      <Link>BaseFolderObjects\Mods.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Mutations.xml">
+      <Link>BaseFolderObjects\Mutations.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\PopulationTables.xml">
+      <Link>BaseFolderObjects\PopulationTables.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\PronounSets.xml">
+      <Link>BaseFolderObjects\PronounSets.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\RewiredKeymap.xml">
+      <Link>BaseFolderObjects\RewiredKeymap.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Skills.xml">
+      <Link>BaseFolderObjects\Skills.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Subtypes.xml">
+      <Link>BaseFolderObjects\Subtypes.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Talents.xml">
+      <Link>BaseFolderObjects\Talents.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\Worlds.xml">
+      <Link>BaseFolderObjects\Worlds.xml</Link>
+    </Resource>
+    <Resource Include="C:\UserFiles\Steam\steamapps\common\Caves of Qud\CoQ_Data\StreamingAssets\Base\ZoneTemplates.xml">
+      <Link>BaseFolderObjects\ZoneTemplates.xml</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
