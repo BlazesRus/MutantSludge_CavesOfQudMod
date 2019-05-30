@@ -8,29 +8,47 @@
             </skills>
         </subtype>
         <subtype Name="AstralSludge" Code="d" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AstralSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="Mental"  DisplayName="AstralSludge">
-            <extrainfo>&amp;c&#249;&amp;y Stable slime that copies mostly mental mutations on engulfment</extrainfo>
+            <extrainfo>&amp;c&amp;y Stable slime that copies mostly mental mutations on engulfment</extrainfo>
+            <stat Name="Agility" Bonus="3" />
+            <stat Name="Ego" Bonus="2" />
+            <stat Name="Strength" Bonus="-4" />
             <skills>
                 <skill Name="Cudgel" />
             </skills>
+            <savemodifiers>
+                <savemodifier Vs="Normality" Amount="5" />
+            </savemodifiers>
         </subtype>
         <subtype Name="CyberSludge" Code="e" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="CyberSlimeCell" DetailColor="C" CyberneticsLicensePoints="2"  AllowedMutationCategories="" DisplayName="CyberSlime" BaseMPGain="0">
-            <extrainfo>&amp;c&#249;&amp;y Stable slime with some machine based features/parts(May rebuke robots), that has ability to install implants(not implemented yet).
+            <extrainfo>&amp;c&amp;y Stable slime with some machine based features/parts(May rebuke robots), that has ability to install implants(not implemented yet).
 &amp;c&#249;&amp;y Absorbs stats but no mutations on engulfment.
 &amp;c&#249;&amp;y 1 CyberneticsLicense points per level from engulfment (2 Starting CyberneticsLicensePoints)
             </extrainfo>
+            <savemodifiers>
+                <savemodifier Vs="Heat" Amount="-2" />
+                <savemodifier Vs="Cold" Amount="-2" />
+                <savemodifier Vs="Stun" Amount="1" />
+                <savemodifier Vs="Sleep" Amount="2" />
+                <savemodifier Vs="Confusion" Amount="1" />
+                <savemodifier Vs="Paralyze" Amount="2" />
+            </savemodifiers>
         </subtype>
         <subtype Name="ChimeraSludge" Code="f" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C"  AllowedMutationCategories="*" DisplayName="ChimeraSludge">
-            <extrainfo>
-&amp;c&#249;&amp;y Stable carnivorous slime with features from other creatures
-            </extrainfo>
+            <extrainfo>&amp;c&amp;y Stable carnivorous slime with features from other creatures</extrainfo>
         </subtype>
 		<subtype Name="MimicSlime" Code="g" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="MimicSlimeCell" DetailColor="C" MutationPoints="0" AllowedMutationCategories="" DisplayName="MimicSlime">
-            <extrainfo>&amp;c&#249;&amp;y Stable slime with mimicry abilities</extrainfo>
+            <extrainfo>&amp;c&amp;y Stable slime with mimicry abilities</extrainfo>
         </subtype>
-         <subtype Name="AdaptiveSlime" Code="h" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AdaptiveSlimeCell" DetailColor="C" AllowedMutationCategories="" DisplayName="AdaptiveSlime">
-            <extrainfo>
-                &amp;c&#249;&amp;y Slime that can adjust its blood type and other features(doesn't feature Soup Sludge like evolution ability)
-            </extrainfo>
+        <subtype Name="AdaptiveSlime" Code="h" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AdaptiveSlimeCell" DetailColor="C" AllowedMutationCategories="" DisplayName="AdaptiveSlime">
+            <extrainfo>&amp;c&amp;y Slime that can adjust its blood type and other features(doesn't feature Soup Sludge like evolution ability)</extrainfo>
+            <!--<savemodifiers>
+                <savemodifier Vs="Heat" Amount="-1" />
+                <savemodifier Vs="Cold" Amount="-1" />
+                <savemodifier Vs="Poison" Amount="2" />
+                <savemodifier Vs="Acid" Amount="2" />
+                <savemodifier Vs="Sleep" Amount="2" />
+                <savemodifier Vs="Confusion" Amount="1" />
+            </savemodifiers>-->
         </subtype>
         <!--<subtype Name="ExperimentalSlime" Code="i" Gear="StartingGear_TestSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="" DisplayName="ExperimentalSlime">
             <extrainfo>

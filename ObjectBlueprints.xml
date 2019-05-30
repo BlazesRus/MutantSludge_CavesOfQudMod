@@ -159,7 +159,7 @@
   </object>
     
   <object Name="AstralSlimeCell" Inherits="BaseOmniSlime01">
-    <part Name="Render" DisplayName="&amp;csoupy &amp;ysludge" />
+    <part Name="Render" DisplayName="&amp;castral &amp;ysludge" />
     <mutation Name="EvolMutV2" Level="1" />
     <part Name="Engulfing" />
     <part Name="AstralConsume" />
@@ -191,9 +191,9 @@
     <part Name="Engulfing" />
     <part Name="ChimeraConsume" />
     <part Name="EvolutionO" />
-    <property Name="Burrowing" Value="true" />
-    <mutation Name="HeightenedHearing" />
-    <mutation Name="BurrowingClaws" Level="10" CreateObject="false" />
+	<mutation Name="HeightenedHearing" />
+<!--     <property Name="Burrowing" Value="true" />
+    <mutation Name="BurrowingClaws" Level="10" CreateObject="false" /> -->
     <!--<mutation Name="GasGeneration" Level="1" GasObject="SleepGas" />
     <mutation Name="LiquidFont" Liquid="gel"></mutation>-->
     <mutation Name="WallWalker"></mutation>
