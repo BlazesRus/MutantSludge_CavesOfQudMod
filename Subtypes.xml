@@ -8,8 +8,7 @@
             </skills>
         </subtype>
         <subtype Name="AstralSludge" Code="d" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AstralSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="Mental"  DisplayName="AstralSludge">
-            <extrainfo>&amp;c&#249;&amp;y Stable slime that copies mostly mental mutations on engulfment
-            </extrainfo>
+            <extrainfo>&amp;c&#249;&amp;y Stable slime that copies mostly mental mutations on engulfment</extrainfo>
             <skills>
                 <skill Name="Cudgel" />
             </skills>
@@ -21,29 +20,25 @@
             </extrainfo>
         </subtype>
         <subtype Name="ChimeraSludge" Code="f" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C"  AllowedMutationCategories="*" DisplayName="ChimeraSludge">
-            <chargeninfo>
+            <extrainfo>
 &amp;c&#249;&amp;y Stable carnivorous slime with features from other creatures
-            </chargeninfo>
+            </extrainfo>
         </subtype>
-        <subtype Name="HybridChimeraSludge" Code="g" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="HybridChimeraSlimeCell" DetailColor="C"  AllowedMutationCategories="*" DisplayName="ChimeraSludgeV2">
-            <chargeninfo>
-&amp;c&#249;&amp;y Stable carnivorous slime with features from other creatures
-            </chargeninfo>
+		<subtype Name="MimicSlime" Code="g" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="MimicSlimeCell" DetailColor="C" MutationPoints="0" AllowedMutationCategories="" DisplayName="MimicSlime">
+            <extrainfo>&amp;c&#249;&amp;y Stable slime with mimicry abilities</extrainfo>
         </subtype>
-<!--         <subtype Name="AdaptiveSlime" Code="i" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AdaptiveSlimeCell" DetailColor="C" AllowedMutationCategories="" DisplayName="AdaptiveSlime">
+         <subtype Name="AdaptiveSlime" Code="h" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="AdaptiveSlimeCell" DetailColor="C" AllowedMutationCategories="" DisplayName="AdaptiveSlime">
             <extrainfo>
                 &amp;c&#249;&amp;y Slime that can adjust its blood type and other features(doesn't feature Soup Sludge like evolution ability)
             </extrainfo>
-        </subtype> -->
-		<subtype Name="MimicSlime" Code="h" Gear="StartingGear_OmniSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="MimicSlimeCell" DetailColor="C" MutationPoints="0" AllowedMutationCategories="" DisplayName="MimicSlime">
-            <extrainfo>
-                &amp;c&#249;&amp;y Stable slime with mimicry abilities
-            </extrainfo>
         </subtype>
-        <!--<subtype Name="ExperimentalSlime" Code="j" Gear="StartingGear_TestSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="" DisplayName="ExperimentalSlime">
+        <!--<subtype Name="ExperimentalSlime" Code="i" Gear="StartingGear_TestSlime" Tile="Creatures/sw_sludge.bmp" BodyObject="ChimeraSlimeCell" DetailColor="C" MutationPoints="12" AllowedMutationCategories="" DisplayName="ExperimentalSlime">
             <extrainfo>
                 &amp;c&#249;&amp;y Version of the slime for testing things etc
             </extrainfo>
         </subtype>-->
+      
+      <!-- Variant versions of subtypes below-->
+      
     </class>
 </subtypes>
