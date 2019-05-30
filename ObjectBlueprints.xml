@@ -202,10 +202,8 @@
    <object Name="AdaptiveSlimeCell" Inherits="BaseOmniSlime01">
     <part Name="Render" DisplayName="&amp;cadaptive &amp;yslime" />
     <part Name="Description" Short="A living slime that evolves to adapt features from other creatures and objects."></part>
-    <mutation Name="EvolMutV2" Level="1" />
     <part Name="Engulfing" />
     <part Name="ChimeraConsume" />
-    <part Name="EvolutionO" />
   </object>
   <object Name="MimicSlimeCell" Inherits="BaseOmniSlime01">
     <part Name="Render" DisplayName="&amp;cmimic &amp;yslime" />
